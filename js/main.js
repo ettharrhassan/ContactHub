@@ -13,6 +13,7 @@ var notesInput = document.getElementById("notes");
 var favoriteInput = document.getElementById("favorite");
 var emergencyInput = document.getElementById("emergency");
 var searchInput = document.getElementById("searchInput");
+var manageCounter = document.getElementById("manageCounter");
 var contactList = [];
 var selectedImage = "";
 
@@ -114,7 +115,7 @@ function getInitials(name) {
 
 function updateAll() {
   totalContactsNumber.textContent = contactList.length;
-
+  document.getElementById("manageCounter").innerText = contactList.length;
   var favCount = 0;
   var emeCount = 0;
   for (var i = 0; i < contactList.length; i++) {
